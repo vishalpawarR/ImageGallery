@@ -7,14 +7,14 @@ const selectedIndex = null;
 
 imageIndexes.forEach( i => {
     const image = document.createElement('img');
-    image.src = `/images/${i}.jpg`;
+    image.src = `./images/${i}.jpg`;
     image.alt = `image ${i}`;
     image.classList.add('galleryImg');
 
 
     image.addEventListener('click', () => {
         popup.style.transform = `translateY(0)`;
-        selectedImage.src = `/images/${i}.jpg`;
+        selectedImage.src = `./images/${i}.jpg`;
     })
     gallery.appendChild(image)
 })
