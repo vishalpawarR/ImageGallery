@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    max-width: 1600px;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.galleryImg {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 250ms;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 3px 3px 10px black;
+    }
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+#popup {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 250ms transform;
+    padding: 50px;
+}
+
+#selectedImage {
+    max-height: 100%;
+}
